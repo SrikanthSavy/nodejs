@@ -1,0 +1,22 @@
+
+const express = require('express')
+
+const router = express.Router()
+
+router.get("/gethello",(req,res)=>{
+    res.status(200)
+    res.send('Welcome to Hello1 Page!')
+})
+
+router.get("/gethello2",(req,res)=>{
+    res.status(200)
+    res.send('Hello from Page 2!')
+})
+
+router.post("/posthello",(req,res)=>{
+    res.status(200)
+    res.send('Hello from POST Page !')
+})
+
+
+module.exports=router

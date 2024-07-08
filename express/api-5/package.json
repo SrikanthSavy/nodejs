@@ -1,0 +1,14 @@
+{
+  "name": "api-5",
+  "version": "1.0.0",
+  "description": "API Creation and status code",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "shoda",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
