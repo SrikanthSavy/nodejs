@@ -1,0 +1,12 @@
+#**/node_modules/**
+# Ignore .vscode directory
+.vscode/
+
+# Other potential ignores (adjust as needed)
+# Node.js
+**/node_modules/**
+#/node_modules/
+/.bin/
+
+# macOS
+.DS_Store

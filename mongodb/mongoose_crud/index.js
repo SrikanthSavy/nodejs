@@ -18,7 +18,7 @@ app.post('/product',productController.create)
 //Fetching all the Products list
 app.get("/allproducts",productController.getProducts)
 //Fetching a Single Product
-app.get("/product/:title",productController.getProduct)
+app.get("/product/:id",productController.getProduct)
 //Updating a product
 app.put('/product/:id',productController.updateProduct)
 //Delete a product
