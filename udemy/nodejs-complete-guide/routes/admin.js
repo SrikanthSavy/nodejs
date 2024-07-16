@@ -3,6 +3,9 @@ const path  = require('path')  // core Node Js module - No NPM install path requ
 const rootDirecoty =require('../util/path') //  importing Helper function to get Root-Directory
 const router = express.Router()
 
+//new-variable to hold what User entered -Array in /add-product method()
+const products=[]
+
 //middleware-2  //GET
 router.get('/add-product', (req, res, next) => {
     console.log("This is from Middleware-2-Add a Product in Express!")
@@ -16,12 +19,15 @@ router.get('/add-product', (req, res, next) => {
 router.post('/add-product', (req, res, next) => {
     console.log("Inside /Product action call")
     console.log(req.body)
+    //adding user entered in Product Array- global
+    products.push({'title': req.body.title})
     res.redirect("/")
     //res.send('<h1>Add a Product in Express!</h1>')
 })
 
 
 
-module.exports = router
+module.exports.routes = router
+module.exports.products = products  // Exporting Product[] -> which has User entered Data  && Use it in server.js
 
 

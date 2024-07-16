@@ -3,7 +3,7 @@ const path = require('path') // Node js Core module
 const bodyParser = require('body-parser')
 
 //Adding our custom express.router() here (admin.js)
-const adminRouter = require('./routes/admin')
+const adminData= require('./routes/admin')
 //Adding our custom express.router() here (shop.js)
 const shopRouter = require('./routes/shop')
 
@@ -12,7 +12,7 @@ const app = express()
 app.use(bodyParser.urlencoded())
 
  //Adding filter so the url -starts with /admin/add-product  or /admin/product
- app.use('/admin',adminRouter) //filtering only /admin paths
+ app.use('/admin',adminData.routes) //filtering only /admin paths
 /*app.use(adminRouter)*/
 app.use(shopRouter)
 
